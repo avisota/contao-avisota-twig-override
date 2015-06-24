@@ -33,15 +33,10 @@
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
-	"autoload":{
-		"psr-0":{
-			"Avisota\\Contao\\Salutation": "src/"
-		}
-	},
 	"extra": {
 		"contao": {
 			"sources": {
-				"module": "system/modules/avisota-twig-override"
+				"contao": "system/modules/avisota-twig-override"
 			}
 		},
 		"branch-alias": {
