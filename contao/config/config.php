@@ -12,7 +12,7 @@
  * @filesource
  */
 
-$GLOBALS['TL_HOOKS']['parseTwigTemplate'][] = array('AvisotaTwigOverride', 'parseTwigTemplate');
+$GLOBALS['TL_HOOKS']['parseTwigTemplate'][] = array('Avisota\Contao\Twig\Override', 'parseTwigTemplate');
 
 /*
  * Example ORIGINALTEMPLATE
@@ -47,3 +47,6 @@ $GLOBALS['TL_HOOKS']['parseTwigTemplate'][] = array('AvisotaTwigOverride', 'pars
 
 // Example override by message alias
 //$GLOBALS['AvisotaTwigOverride']['message'][] = array('alias', 'ALIAS', 'ORIGINALTEMPLATE', 'NEWTEMPLATE');
+
+// Example override by message-element id
+//$GLOBALS['AvisotaTwigOverride']['element'][] = array('id', 'ID', 'ORIGINALTEMPLATE', 'NEWTEMPLATE');
