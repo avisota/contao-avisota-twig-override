@@ -42,7 +42,7 @@ class Override extends \TwigTemplate
 				$this->format        = $template->format;
 				$this->fileExtension = $template->fileExtension;
 
-				$types = array('theme', 'layout', 'message');
+				$types = array('theme', 'layout', 'message', 'element');
 
 				foreach ($types as $type) {
 					if (is_array($GLOBALS['AvisotaTwigOverride'][$type])) {
@@ -50,6 +50,34 @@ class Override extends \TwigTemplate
 
 						$buffer = $this->$method($buffer, $context, $GLOBALS['AvisotaTwigOverride'][$type]);
 					}
+				}
+			}
+		}
+
+		return $buffer;
+	}
+
+
+	/**
+	 * Override by message method
+	 *
+	 * @param $buffer
+	 * @param $context
+	 * @param $overrides
+	 *
+	 * @return string
+	 */
+	protected function overrideByElement($buffer, $context, $overrides)
+	{
+		if (is_array($overrides)) {
+			foreach ($overrides as $override) {
+
+				if ($context['id'] === $override[1] && $this->templateName === $override[2]) {
+					$this->templateName = $override[3];
+
+					$buffer = $this->parse($context);
+
+					$this->templateName = $override[2];
 				}
 			}
 		}
