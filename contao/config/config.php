@@ -47,3 +47,6 @@ $GLOBALS['TL_HOOKS']['parseTwigTemplate'][] = array('Avisota\Contao\Twig\Overrid
 
 // Example override by message alias
 //$GLOBALS['AvisotaTwigOverride']['message'][] = array('alias', 'ALIAS', 'ORIGINALTEMPLATE', 'NEWTEMPLATE');
+
+// Example override by message-element id
+//$GLOBALS['AvisotaTwigOverride']['element'][] = array('id', 'ID', 'ORIGINALTEMPLATE', 'NEWTEMPLATE');
