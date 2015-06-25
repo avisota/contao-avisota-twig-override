@@ -13,13 +13,14 @@
  * @filesource
  */
 
+namespace Avisota\Contao\Twig;
 
 /**
  * Class AvisotaTwigOverride
  *
  * Overrides defined twig templates
  */
-class AvisotaTwigOverride extends \TwigTemplate
+class Override extends \TwigTemplate
 {
 
 	/**
