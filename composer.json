@@ -33,6 +33,11 @@
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
+    "autoload": {
+        "psr-0": {
+            "Avisota\\Contao\\Twig": "src/"
+        }
+    },
 	"extra": {
 		"contao": {
 			"sources": {

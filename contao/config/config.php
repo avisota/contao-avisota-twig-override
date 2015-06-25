@@ -12,7 +12,7 @@
  * @filesource
  */
 
-$GLOBALS['TL_HOOKS']['parseTwigTemplate'][] = array('AvisotaTwigOverride', 'parseTwigTemplate');
+$GLOBALS['TL_HOOKS']['parseTwigTemplate'][] = array('Avisota\Contao\Twig\Override', 'parseTwigTemplate');
 
 /*
  * Example ORIGINALTEMPLATE
